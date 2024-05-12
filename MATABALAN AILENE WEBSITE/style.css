@@ -1,0 +1,417 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior:smooth ;
+}
+/*nbavbar */
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #11a372;
+    position: sticky;
+    top: 0;
+    
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    margin: 20px 0px;
+    position: relative;
+}
+.navbar ul li{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    padding: 8px 25px;
+    transition: all .5s ease;
+}
+.navbar ul li a:hover{
+    background-color: white;
+    color: #11a372;
+    box-sizing: 0 0  10px white;
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+    font-weight: bold;
+}
+.navbar ul li ul.dropdown li{
+    display: block;
+}
+.navbar ul li ul.dropdown{
+    width: 100%;
+    background: transparent;
+    position: relative;
+    z-index: 8;
+    display: none;
+}
+.navbar ul li a:hover{
+    background: white;
+}
+.navbar ul li:hover ul.dropdown{
+    display: block;
+}
+
+
+/* Home Section*/
+#home{
+    display: flex;
+    flex-direction: column;
+    height: 840px;
+    justify-content:baseline;
+    align-items: center;
+    color:rgb(244, 244, 252);
+    font-weight: 500;
+    font-size: 1.5rem;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+#home::before{
+    content: "";
+    position:absolute;
+    top: 0;
+    right: 0;
+    background: url('images/Ai13.jpg');
+    height: 1300px;
+    width: 100%;
+    z-index: -1;
+    opacity: 3;
+}
+.main{
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid white;*/
+    align-items:baseline;
+    position: absolute;
+    top: 30%;
+    right: 10%;
+}
+.headings{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.8rem;
+    text-align: center;
+    margin: 40px 0px;
+    color: #1ae09e;
+    font-weight: 2000;
+}
+.btn{
+    padding: 10px 35px;
+    background-color: transparent;
+    border: 1px solid white;
+    color:white;
+    outline: none;
+    transition: .6s ease;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    box-shadow: 0 0 5px white, 0 0 10px white, 0 0 15px white;
+    font-weight: bold;
+}
+
+/* About Section */
+#about{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+    background-color: #11a372;
+    height: 800px;
+    color: white;
+}
+#pic{
+    display: flex;
+}
+#pic img{
+width: 700px;
+height: 500px;
+box-shadow: 0 0 25px white,
+            0 0 50px orange;
+border-radius: 100%;            
+
+}
+#intro{
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+    padding: 10px;
+}
+#intro h2{
+    font-size: 1.4rem;
+    color: white;
+    margin-bottom: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+/* Education Section */
+#education{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background-color:white;
+    height: 1000px;
+    color: #11a372;
+}
+.container{
+    width: 500%;
+    padding: 30px 0%;
+    height: 100%;
+    
+}
+.container{
+    padding-right:calc(0% - 40px) ;
+}
+main.row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 10px;
+}
+.col header.title{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    padding: 0px 0px 20px 30px;
+}
+.col .contents{
+    padding: 0px 30px;
+    border-left: 2px solid #bababa;
+}
+.col .contents .box{
+    position: relative;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-bottom: 20px;
+    height: 200px;
+}
+.col .contents .box:hover{
+    box-shadow: 0px 3px 12px 0px #ccc;
+    border: 1px solid transparent;
+}
+
+.col .contents .box::before{
+    content:'';
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    right: 100%;
+    top: 0;
+    background-color: #11a372;
+    border: 2px solid white;
+}
+.box h4{
+    position: relative;
+    color: #11a372;
+}
+.box h3{
+    font-size: 19px;
+    padding: 10px 0px 6px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #444;
+}
+.box p{
+    line-height: 1.2;
+    color: #666;
+    font-size: 17px;
+}
+@media(max-width: 768px){
+    main.row{
+        grid-template-columns: 1fr;
+    }
+    .row.col:nth-child(2){
+        margin-top: 30px;
+    }
+}
+
+#sketching{
+    display: flex;
+    flex-direction: column;
+    background-color: #11a372;
+    color: white;
+    align-items: center;
+    padding: 20px;
+}
+.gallery{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 15px;
+
+}
+
+
+.gallery img{
+flex-wrap: wrap;
+width: 320px;
+height: 300px;
+margin: 10px 0;
+cursor: pointer;
+}
+#drawing{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    color: #11a372;
+    align-items: center;
+    padding: 20px;
+   
+}
+
+/* Experience Section */
+#experience{
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 20px;
+    margin-bottom: 50px;
+    background-color: #11a372;
+    height: 1000px;
+    color: white;
+}
+#pic img{
+    height: 350px;
+    width: 290px;
+}
+#experience h3{
+    padding: 50px;
+}
+
+
+
+/* Contact section*/
+
+#contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: white;
+}
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+.contact .content h2{
+    font-size: 36px;
+    font-weight: 500;
+    color: #fff;
+}
+.contact .content p{
+    font-weight: 300;
+    color: #fff;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+.container .contactInfo{
+    width: 50;
+    display: flex;
+    flex-direction: column;
+}
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px;
+}
+.container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: black;
+    flex-direction: column;
+    font-weight: 300;
+}
+.container .contactInfo .box .text h3{
+    font-weight: 500;
+    color:#11a372;
+}
+.contactForm{
+    width: 40%;
+    padding:40px;
+    background: #fff;
+}
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+.contacForm .inputBox input,
+.contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+.contactForm .inputBox span{
+    position:relative;
+    left: 0;
+    padding: 5px 0;
+    font-size: 20px;
+    margin: 5px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color:#666;
+}
+.contactForm .inputBox input:focus ~ span,
+.contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span,
+.contactForm .inputBox textarea:valid ~ span{
+    color:#e91e63;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+.contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: #11a372;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    font-size: 18px;
+}
+@media (max-width: 991px){
+    .contact{
+        padding: 50px;
+    }
+    .container{
+        flex-direction: column;
+    }
+    .container .contactInfo{
+        margin-bottom: 40px;
+    }
+    .container .contactInfo{
+        width: 100%;
+    }
+}
